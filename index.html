@@ -533,6 +533,11 @@ footer ul{list-style:none}
     <p class="lede">The digital prototype records every playtest automatically: <strong>27 full sessions</strong> of
     telemetry (every card played, event answered, and point of damage dealt) shaped the rules you see today.
     Three findings changed the game the most:</p>
+    <p style="font-size:.88rem;color:var(--ink-3);font-style:italic;max-width:75ch;margin-top:.8rem">A note on the data:
+    the 27 sessions span several prototype iterations, and some seats were temporarily covered by Auto Play (excluded
+    from behaviour analyses, which unevens some sample sizes). Percentages here are directional evidence rather than
+    precise final-build estimates; system-level metrics such as event frequency, damage, and turn counts hold up across
+    all sessions.</p>
     <div class="balance-notes">
       <div class="bn"><b>Going first was worth too much.</b> Across 27 games the first seat won 52% of the time against
       the second seat&rsquo;s 37%. We saw it in the damage race: both seats take ~9 damage per game, but seat one converts
@@ -544,13 +549,14 @@ footer ul{list-style:none}
       <div class="bn"><b>Players ignored what they couldn&rsquo;t afford.</b> Forgetting (61% ignore rate) and Boundary
       Disturbance (69%) were skipped whenever Attention ran dry, stalling the events that carry the game&rsquo;s theme.
       We lowered their Attention costs and made resolution rewards more visible, pulling the global event
-      resolve rate up toward the 60% we observe now.</div>
+      resolve rate up toward the 60% we observe now. A final-build validation session under Ruleset 0.3.1 confirmed
+      the fix: 69% of revealed events resolved, none ignored, none left unresolved at game end.</div>
     </div>
     <div class="doc-row">
       <div class="doc">
         <div class="ico">◎</div>
         <b>Full Playtesting Log</b>
-        <p>The full log: session timeline (June 18 – July 6), the three findings with the telemetry behind each revision, event health tables, and the open items carried forward.</p>
+        <p>The full log: session timeline (June 18 – July 6), data-interpretation notes, the three findings with the telemetry behind each revision, event health tables, and the final-build validation session under Ruleset 0.3.1.</p>
         <a class="btn" href="assets/playtest-log.pdf" target="_blank" rel="noopener">Download PDF</a>
       </div>
     </div>
@@ -718,7 +724,7 @@ footer ul{list-style:none}
 
     <p class="sec-kicker" style="margin-top:3.4rem">Simulation Lab</p>
     <h3 style="font-family:var(--serif);font-size:1.7rem;font-weight:600;color:var(--gold-hi)">4,000 Games Nobody Had to Play</h3>
-    <p class="lede" style="margin-top:.6rem">To test the rules beyond what 27 human sessions can cover, one of our team built a
+    <p class="lede" style="margin-top:.6rem">To test the rules beyond what 27 recorded sessions can cover, one of our team built a
     <em>balance lab</em>: a headless simulator that drives the real game engine (read-only, same public calls as the UI) with three
     scripted player archetypes: <strong>Aggressive</strong> hunts low-HP rivals, <strong>Defensive</strong> heals and hoards,
     <strong>Random</strong> plays legal chaos. Each 2,000-game batch seats one Aggressive, one Defensive, and two Random dreamers
@@ -764,7 +770,7 @@ footer ul{list-style:none}
       needs either cheaper attacks or richer kill rewards to earn its risk.</div>
       <div class="bn"><b>What the simulator can&rsquo;t see.</b> The bots never use the three unique items (Belief, Courage, Hope)
       or initiate trades (those flow through interactive UIs the lab doesn&rsquo;t script), and it models most defenses as
-      proactive statuses. Those gaps are exactly what the 27 human sessions cover; the two evidence streams are complementary,
+      proactive statuses. Those gaps are exactly what the human-controlled sessions cover; the two evidence streams are complementary,
       not redundant.</div>
     </div>
 
