@@ -16,7 +16,11 @@
   [ ] TODO:INSPIRATIONS Review/replace the games listed as inspirations.
   [ ] TODO:PILLARS      Review the three pillar sentences.
   [ ] TODO:BACKSTORY    Review the storyworld copy.
-  [ ] TODO:RULEBOOK     Link the rulebook PDF (href="#").
+  [x] RULEBOOK     Done — assets/rulebook.pdf (v2.0, 15 pages, metadata clean).
+  [ ] TODO:SIM-LABELS   Confirm the two Simulation Lab scenario descriptions
+                        ("baseline" vs "all-hand variant") with the teammate
+                        who built the balance lab, and have him sanity-check
+                        the Simulation Lab copy in #balance.
   [ ] TODO:MINUTES      Link the meeting-minutes PDF + fill real dates.
   [ ] TODO:PLAYTEST-PDF Link the playtesting log PDF.
   [ ] TODO:BALANCE-PDF  Link the full balance analysis PDF (optional: the
@@ -500,9 +504,8 @@ footer ul{list-style:none}
       <div class="doc">
         <div class="ico">⚜</div>
         <b>The Rule Book</b>
-        <p>Complete rules of the dream: setup, the turn cycle (Advance → Event → Memories → End), Attention costs, combat and Confusion, item Memories, and all four ending conditions.</p>
-        <!-- TODO:RULEBOOK — point href at the rulebook PDF -->
-        <a class="btn" href="#" aria-disabled="true">Download PDF <span class="ph-tag" style="margin-left:.5rem">coming soon</span></a>
+        <p>Complete rules of the dream: setup, the turn cycle, Attention costs, combat and Confusion, item Memories, and the ending conditions — 15 pages, v2.0.</p>
+        <a class="btn" href="assets/rulebook.pdf" target="_blank" rel="noopener">Download PDF (5.7 MB)</a>
       </div>
     </div>
   </div>
@@ -587,8 +590,9 @@ footer ul{list-style:none}
   <div class="wrap reveal">
     <p class="sec-kicker">Data</p>
     <h2 class="sec-title">Balance, by the Numbers</h2>
-    <p class="lede">The prototype logs every game event to telemetry, and an analysis pipeline turns raw logs into
-    the reports below. All figures come from <strong>27 recorded playtest sessions</strong> of the current ruleset.</p>
+    <p class="lede">Balance was tuned from two evidence streams: the prototype logs every human playtest to telemetry
+    (<strong>27 recorded sessions</strong>), and a headless simulation lab replays the same rules at scale
+    (<strong>4,000 scripted games</strong>). Human data first; the Simulation Lab follows below.</p>
 
     <div class="stat-row">
       <div class="stat"><div class="num">27</div><div class="lbl">Recorded playtests</div></div>
@@ -720,6 +724,58 @@ footer ul{list-style:none}
       <details><summary>View as table</summary><table><tr><th>Seat</th><th>Games</th><th>Wins</th><th>Win rate</th><th>Avg damage taken</th></tr>
       <tr><td>Seat 1</td><td>27</td><td>14</td><td>51.9%</td><td>9.0</td></tr>
       <tr><td>Seat 2</td><td>27</td><td>10</td><td>37.0%</td><td>9.1</td></tr></table></details>
+    </div>
+
+    <p class="sec-kicker" style="margin-top:3.4rem">Simulation Lab</p>
+    <h3 style="font-family:var(--serif);font-size:1.7rem;font-weight:600;color:var(--gold-hi)">4,000 Games Nobody Had to Play</h3>
+    <p class="lede" style="margin-top:.6rem">To test the rules beyond what 27 human sessions can cover, one of our team built a
+    <em>balance lab</em>: a headless simulator that drives the real game engine (read-only, same public calls as the UI) with three
+    scripted player archetypes — <strong>Aggressive</strong> hunts low-HP rivals, <strong>Defensive</strong> heals and hoards,
+    <strong>Random</strong> plays legal chaos. Each 2,000-game batch seats one Aggressive, one Defensive, and two Random dreamers
+    and lets the dice fall where they may.</p>
+
+    <div class="stat-row">
+      <div class="stat"><div class="num">4,000</div><div class="lbl">Simulated games</div></div>
+      <div class="stat"><div class="num">23.7</div><div class="lbl">Avg turns (baseline)</div></div>
+      <div class="stat"><div class="num">20%</div><div class="lbl">Dreamer death rate</div></div>
+      <div class="stat"><div class="num">30%</div><div class="lbl">Attacks that land damage</div></div>
+    </div>
+
+    <!-- Chart E: strategy win rate across the two 2000-game scenarios -->
+    <div class="chart-card">
+      <h3>Survival of the Meekest</h3>
+      <p class="sub">Win rate by scripted strategy across two 2,000-game scenarios (shared true endings mean several dreamers can win one game, so rates don&rsquo;t sum to 100%)</p>
+      <div class="legend"><span><i style="background:#cc7e1d"></i>Baseline ruleset</span><span><i style="background:#9c4238"></i>All-hand variant</span></div>
+      <svg viewBox="0 0 640 160" role="img" aria-label="Grouped bar chart of win rate by strategy: defensive 98 and 88 percent, random 86 and 71 percent, aggressive 50 percent in both scenarios">
+        <g font-size="12" fill="#b3a288">
+          <text x="168" y="32" text-anchor="end">Defensive</text>
+          <text x="168" y="80" text-anchor="end">Random</text>
+          <text x="168" y="128" text-anchor="end">Aggressive</text>
+        </g>
+        <g class="bar-hit" data-tip="Defensive — 98.4% win rate, baseline (1,968 of 2,000 seats)"><rect class="bar" x="178" y="18" width="413" height="13" rx="4" fill="#cc7e1d"/><text x="599" y="29" font-size="11" fill="#e9dcc3">98%</text></g>
+        <g class="bar-hit" data-tip="Defensive — 88.4% win rate, all-hand variant"><rect class="bar" x="178" y="33" width="371" height="13" rx="4" fill="#9c4238"/><text x="557" y="44" font-size="11" fill="#e9dcc3">88%</text></g>
+        <g class="bar-hit" data-tip="Random — 85.5% win rate, baseline"><rect class="bar" x="178" y="66" width="359" height="13" rx="4" fill="#cc7e1d"/><text x="543" y="77" font-size="11" fill="#e9dcc3">86%</text></g>
+        <g class="bar-hit" data-tip="Random — 70.5% win rate, all-hand variant"><rect class="bar" x="178" y="81" width="296" height="13" rx="4" fill="#9c4238"/><text x="480" y="92" font-size="11" fill="#e9dcc3">71%</text></g>
+        <g class="bar-hit" data-tip="Aggressive — 49.5% win rate, baseline"><rect class="bar" x="178" y="114" width="208" height="13" rx="4" fill="#cc7e1d"/><text x="392" y="125" font-size="11" fill="#e9dcc3">50%</text></g>
+        <g class="bar-hit" data-tip="Aggressive — 49.7% win rate, all-hand variant"><rect class="bar" x="178" y="129" width="209" height="13" rx="4" fill="#9c4238"/><text x="393" y="140" font-size="11" fill="#e9dcc3">50%</text></g>
+      </svg>
+      <details><summary>View as table</summary><table><tr><th>Strategy</th><th>Baseline win rate</th><th>All-hand win rate</th><th>Baseline death rate</th><th>Avg damage dealt (baseline)</th></tr>
+      <tr><td>Defensive</td><td>98.4%</td><td>88.4%</td><td>1.6%</td><td>0.9</td></tr>
+      <tr><td>Random</td><td>85.5%</td><td>70.5%</td><td>14.5%</td><td>6.5</td></tr>
+      <tr><td>Aggressive</td><td>49.5%</td><td>49.7%</td><td>50.7%</td><td>10.1</td></tr></table></details>
+    </div>
+
+    <div class="balance-notes">
+      <div class="bn"><b>Turtling is overtuned.</b> Defensive bots win 98% of baseline games while dealing under 1 HP of damage
+      per game — pure survival is currently the dominant strategy, which tells us the healing economy and defensive Memories
+      need a cost pass before the next revision.</div>
+      <div class="bn rose"><b>Aggression is a trap — by the numbers.</b> Winning a kill barely moves the odds (80.8% with a kill
+      vs 79.6% without in baseline), only ~30% of attack attempts land damage, and aggressive bots die half the time. Combat
+      needs either cheaper attacks or richer kill rewards to earn its risk.</div>
+      <div class="bn"><b>What the simulator can&rsquo;t see.</b> The bots never use the three unique items (Belief, Courage, Hope)
+      or initiate trades — those flow through interactive UIs the lab doesn&rsquo;t script — and it models most defenses as
+      proactive statuses. Those gaps are exactly what the 27 human sessions cover; the two evidence streams are complementary,
+      not redundant.</div>
     </div>
 
     <div class="doc-row">
