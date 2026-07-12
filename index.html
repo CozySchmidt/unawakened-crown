@@ -84,15 +84,15 @@ section{position:relative;padding:5.5rem 1.5rem}
 
 /* ═══════════════ NAV ═══════════════ */
 nav{position:fixed;top:0;left:0;right:0;z-index:50;background:rgba(14,10,7,.82);backdrop-filter:blur(10px);border-bottom:1px solid rgba(200,155,95,.14)}
-.nav-in{max-width:var(--maxw);margin:0 auto;display:flex;align-items:center;gap:1rem;padding:.65rem 1.5rem}
+.nav-in{max-width:1280px;margin:0 auto;display:flex;align-items:center;gap:1rem;padding:.65rem 1.5rem}
 .brand{font-family:var(--serif);font-weight:700;font-size:1.1rem;color:var(--gold-hi);white-space:nowrap}
 .brand svg{width:20px;height:20px;vertical-align:-3px;margin-right:.4rem}
-.nav-links{display:flex;gap:.15rem;margin-left:auto;list-style:none;flex-wrap:wrap;justify-content:flex-end}
-.nav-links a{display:block;padding:.35rem .6rem;font-size:.82rem;font-weight:600;letter-spacing:.02em;color:var(--ink-2);border-radius:6px}
+.nav-links{display:flex;gap:.1rem;margin-left:auto;list-style:none;flex-wrap:nowrap;justify-content:flex-end}
+.nav-links a{display:block;padding:.32rem .48rem;font-size:.78rem;font-weight:600;letter-spacing:.02em;color:var(--ink-2);border-radius:6px;white-space:nowrap}
 .nav-links a:hover{color:var(--gold-hi);background:rgba(200,155,95,.08)}
 .nav-links a.active{color:var(--gold-hi);background:rgba(200,155,95,.13)}
 #nav-toggle{display:none;margin-left:auto;background:none;border:1px solid var(--line);color:var(--gold);font-size:1.2rem;padding:.2rem .6rem;border-radius:6px;cursor:pointer}
-@media(max-width:940px){
+@media(max-width:1180px){
   #nav-toggle{display:block}
   .nav-links{display:none;position:absolute;top:100%;left:0;right:0;background:rgba(14,10,7,.97);flex-direction:column;padding:.6rem 1rem 1rem;border-bottom:1px solid var(--line)}
   .nav-links.open{display:flex}
@@ -463,7 +463,6 @@ footer ul{list-style:none}
       <figure class="gcard" data-type="memory" data-full="assets/memory_BansheesSong.webp" data-cap="Banshee’s Song — Roll a D6 to confuse a rival and steal from their hand."><span class="type">Memory</span><img src="assets/memory_BansheesSong.webp" alt="Banshee’s Song memory card art" loading="lazy"><figcaption class="cap"><b>Banshee&rsquo;s Song</b><span>Roll a D6 to confuse a rival and steal from their hand.</span></figcaption></figure>
       <figure class="gcard" data-type="memory" data-full="assets/memory_Belief.webp" data-cap="Belief: Doctor’s Business Card — Unique item. +2 max Attention — at the Doctor’s price."><span class="type">Memory</span><img src="assets/memory_Belief.webp" alt="Belief: Doctor’s Business Card memory card art" loading="lazy"><figcaption class="cap"><b>Belief: Doctor&rsquo;s Business Card</b><span>Unique item. +2 max Attention — at the Doctor&rsquo;s price.</span></figcaption></figure>
       <figure class="gcard" data-type="memory" data-full="assets/memory_Contemplation.webp" data-cap="Contemplation — Discard 2 path cards, then reveal the next."><span class="type">Memory</span><img src="assets/memory_Contemplation.webp" alt="Contemplation memory card art" loading="lazy"><figcaption class="cap"><b>Contemplation</b><span>Discard 2 path cards, then reveal the next.</span></figcaption></figure>
-      <figure class="gcard textonly" data-type="memory"><span class="type">Memory</span><figcaption class="cap"><b>Contemplation (Delayed)</b><span>Discard 3 path cards at the start of your next turn.</span></figcaption></figure>
       <figure class="gcard" data-type="memory" data-full="assets/memory_Courage.webp" data-cap="Courage: Rogue’s Cloak — Unique item. Trade HP and Attention for faster travel."><span class="type">Memory</span><img src="assets/memory_Courage.webp" alt="Courage: Rogue’s Cloak memory card art" loading="lazy"><figcaption class="cap"><b>Courage: Rogue&rsquo;s Cloak</b><span>Unique item. Trade HP and Attention for faster travel.</span></figcaption></figure>
       <figure class="gcard" data-type="memory" data-full="assets/memory_Criticism.webp" data-cap="Criticism — Deal 5 damage and peek at a rival’s hand."><span class="type">Memory</span><img src="assets/memory_Criticism.webp" alt="Criticism memory card art" loading="lazy"><figcaption class="cap"><b>Criticism</b><span>Deal 5 damage and peek at a rival&rsquo;s hand.</span></figcaption></figure>
       <figure class="gcard" data-type="memory" data-full="assets/memory_DefensiveDevaluation.webp" data-cap="Defensive Devaluation — Take no damage for 2 turns — but slow to a crawl."><span class="type">Memory</span><img src="assets/memory_DefensiveDevaluation.webp" alt="Defensive Devaluation memory card art" loading="lazy"><figcaption class="cap"><b>Defensive Devaluation</b><span>Take no damage for 2 turns — but slow to a crawl.</span></figcaption></figure>
@@ -482,12 +481,6 @@ footer ul{list-style:none}
       <figure class="gcard" data-type="memory" data-full="assets/memory_Split.webp" data-cap="Split — Roll a D6 and knock a rival back down the path."><span class="type">Memory</span><img src="assets/memory_Split.webp" alt="Split memory card art" loading="lazy"><figcaption class="cap"><b>Split</b><span>Roll a D6 and knock a rival back down the path.</span></figcaption></figure>
     </div>
 
-    <div class="pieces">
-      <div class="piece"><div class="ico">🎲</div><b>Six-Sided Die</b><span>One D6 drives event outcomes, Confusion checks, and push-your-luck Memories like Ponder and Split.</span></div>
-      <div class="piece"><div class="ico">♟</div><b>Dreamer Pawns</b><span>2–4 dreamer tokens track each player&rsquo;s position along the path of cards.</span></div>
-      <div class="piece"><div class="ico">❤</div><b>HP &amp; Attention Dials</b><span>Twin trackers per dreamer: HP is your body in the dream; Attention is the will you spend to act.</span></div>
-      <div class="piece"><div class="ico">🂠</div><b>The Path Deck</b><span>The road itself — a deck revealed, scouted, and burned card-by-card as dreamers advance.</span></div>
-    </div>
   </div>
 </section>
 
@@ -501,7 +494,7 @@ footer ul{list-style:none}
     <div class="stat-row" style="margin-top:1.6rem">
       <!-- TODO:QUICKFACTS — confirm these -->
       <div class="stat"><div class="num">2–4</div><div class="lbl">Dreamers</div></div>
-      <div class="stat"><div class="num">30–45</div><div class="lbl">Minutes</div></div>
+      <div class="stat"><div class="num">10–15</div><div class="lbl">Minutes</div></div>
       <div class="stat"><div class="num">10+</div><div class="lbl">Ages</div></div>
       <div class="stat"><div class="num">4</div><div class="lbl">Possible endings</div></div>
     </div>
