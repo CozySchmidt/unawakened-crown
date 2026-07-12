@@ -9,13 +9,9 @@
   playtesting log → flowcharts → quantitative balance analysis.
 
   ── TODO CHECKLIST (search for "TODO:" to jump to each) ──────────────────
-  [ ] TODO:BOARD-SHOT   Replace assets/board_placeholder with a real game
-                        board screenshot (run `python main.py`, press F12 or
-                        use Win+Shift+S, save as assets/board.webp, then
-                        swap the placeholder <div> for the <img> provided
-                        in the comment there).
-  [ ] TODO:TRAILER      Replace the trailer placeholder with your YouTube
-                        embed iframe (snippet provided in comment).
+  [x] BOARD-SHOT   Done — assets/board.webp (live session screenshot).
+  [x] TRAILER      Done — assets/trailer.mp4, self-hosted (2:02, 17.6 MB,
+                   re-encoded from the .mov, metadata stripped).
   [ ] TODO:CORE-STMT    Review the one-sentence core statement.
   [ ] TODO:INSPIRATIONS Review/replace the games listed as inspirations.
   [ ] TODO:PILLARS      Review the three pillar sentences.
@@ -307,18 +303,7 @@ footer ul{list-style:none}
       <a class="btn" href="#rulebook">Read the Rules</a>
     </div>
     <figure class="board-inset">
-      <!-- TODO:BOARD-SHOT — replace this placeholder with a real screenshot:
-           1) run `python main.py` in the game project, start a 4-player game
-           2) capture with Win+Shift+S at full window size
-           3) save as assets/board.webp
-           4) delete the <div class="board-ph"> below and un-comment:
-      <img src="assets/board.webp" alt="The Unawakened Crown game board mid-session: four dreamers on the path deck with their memory hands, HP and Attention visible">
-      -->
-      <div class="board-ph">
-        <strong>The Game Board</strong>
-        <span>Screenshot of a live four-dreamer session goes here — path deck, memory hands, HP &amp; Attention dials.</span>
-        <span class="ph-tag">Placeholder — swap in board screenshot</span>
-      </div>
+      <img src="assets/board.webp" alt="The Unawakened Crown game board mid-session: the current player's hand of six memory cards, both dreamers' HP and Attention panels, the path deck, and the game log">
       <figcaption>The board mid-game: the shared path unfolds card by card while each dreamer manages HP, Attention, and a hand of Memories.</figcaption>
     </figure>
   </div>
@@ -333,14 +318,10 @@ footer ul{list-style:none}
     <h2 class="sec-title">Trailer</h2>
     <p class="lede">Ninety seconds inside the dream — the path, the bargains, and the cost of every step.</p>
     <div class="frame" style="margin-top:1.8rem">
-      <!-- TODO:TRAILER — replace this placeholder block with your embed:
-      <iframe style="aspect-ratio:16/9;width:100%;border:0" src="https://www.youtube.com/embed/YOUR_VIDEO_ID" title="The Unawakened Crown — board game trailer" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-      -->
-      <div class="trailer-ph">
-        <div class="play-ring"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg></div>
-        <p>Board game trailer · under 3 minutes</p>
-        <span class="ph-tag">Placeholder — embed video</span>
-      </div>
+      <video controls preload="metadata" poster="assets/trailer_poster.webp" style="aspect-ratio:16/9;width:100%;display:block;background:#000" title="The Unawakened Crown — board game overview trailer">
+        <source src="assets/trailer.mp4" type="video/mp4">
+        Your browser does not support embedded video — <a href="assets/trailer.mp4">download the trailer</a> instead.
+      </video>
     </div>
   </div>
 </section>
