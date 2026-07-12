@@ -21,10 +21,14 @@
                         ("baseline" vs "all-hand variant") with the teammate
                         who built the balance lab, and have him sanity-check
                         the Simulation Lab copy in #balance.
-  [ ] TODO:MINUTES      Link the meeting-minutes PDF + fill real dates.
+  [x] MINUTES      Done — assets/meetings.pdf (both meetings merged, author
+                   metadata stripped); real dates and summaries on the page.
+  [x] BALANCE-PDF  Done — assets/analysis.pdf (teammate's write-up, v0.2.5_EA).
+  [x] DYNAMICS     Done — #dynamics section + assets/dynamics.pdf and
+                   assets/tradeoffs.pdf (beyond-brief checklist items).
   [ ] TODO:PLAYTEST-PDF Link the playtesting log PDF.
-  [ ] TODO:BALANCE-PDF  Link the full balance analysis PDF (optional: the
-                        analyzer's dashboard export also works).
+  [ ] TODO:CONTRIB      Add the team contribution section (who did what, and
+                        roughly how much) — needs names + shares from the team.
   [ ] TODO:QUICKFACTS   Confirm player count / play time / age on the
                         rulebook quick-facts strip.
   [ ] TODO:TEAM         Fill real team member names in the footer.
@@ -290,6 +294,7 @@ footer ul{list-style:none}
       <li><a href="#playtesting">Playtesting</a></li>
       <li><a href="#flowcharts">Flowcharts</a></li>
       <li><a href="#balance">Balance</a></li>
+      <li><a href="#dynamics">Dynamics</a></li>
     </ul>
   </div>
 </nav>
@@ -515,19 +520,16 @@ footer ul{list-style:none}
   <div class="wrap reveal">
     <h2 class="sec-title" style="font-size:clamp(1.6rem,3vw,2.1rem)">Group Meeting Log</h2>
     <p class="lede">Minutes and summaries of each team meeting, kept in a shared time-stamped folder throughout the project.</p>
-    <!-- TODO:MINUTES — replace placeholder rows with real dates/summaries and link the PDF -->
     <div class="meet-list">
-      <div class="meet"><b>Meeting 01 · <span class="ph-tag">date</span></b><span>Team formation, concept pitch: a race where movement costs memories. Roles assigned.</span></div>
-      <div class="meet"><b>Meeting 02 · <span class="ph-tag">date</span></b><span>Core loop locked (Advance / Event / Memories). First path-deck paper prototype.</span></div>
-      <div class="meet"><b>Meeting 03 · <span class="ph-tag">date</span></b><span>Event deck writing session; art direction chosen; playtest telemetry plan.</span></div>
-      <div class="meet"><b>Meeting 04 · <span class="ph-tag">date</span></b><span>Balance review of playtest data; Cart Dilemma and Forgetting reworked.</span></div>
+      <div class="meet"><b>Meeting 01 · June 8, 2026</b><span>Project direction set and general tasks assigned; the game&rsquo;s name decided; deliverable format weighed (PDF vs. website); attendance expectations agreed, with an escalation deadline for unresponsive members.</span></div>
+      <div class="meet"><b>Meeting 02 · June 18, 2026</b><span>Data-collection groundwork completed; the design was flagged as hard for new players, with a clearer onboarding version assigned; Google Docs adopted for collaboration; timeline reviewed against the July 12 deadline.</span></div>
     </div>
     <div class="doc-row">
       <div class="doc">
         <div class="ico">✎</div>
         <b>Full Meeting Minutes</b>
-        <p>First page of every meeting&rsquo;s minutes, compiled chronologically as one document.</p>
-        <a class="btn" href="#" aria-disabled="true">Download PDF <span class="ph-tag" style="margin-left:.5rem">coming soon</span></a>
+        <p>The minutes of both team meetings, compiled chronologically as one document.</p>
+        <a class="btn" href="assets/meetings.pdf" target="_blank" rel="noopener">Download PDF</a>
       </div>
     </div>
   </div>
@@ -782,10 +784,74 @@ footer ul{list-style:none}
       <div class="doc">
         <div class="ico">∑</div>
         <b>Full Quantitative Analysis</b>
-        <p>The complete report: per-card impact deltas, option availability and selection rates, event resolution
-        tables, and the probability adjustments made between rule revisions.</p>
-        <!-- TODO:BALANCE-PDF — link the full analysis PDF or exported dashboard -->
-        <a class="btn" href="#" aria-disabled="true">Download PDF <span class="ph-tag" style="margin-left:.5rem">coming soon</span></a>
+        <p>The written analysis (v0.2.5_EA): movement pacing, event density, attack-card supply, damage-to-health
+        ratios, and the profit structure of event options — with the value adjustments each finding motivated.</p>
+        <a class="btn" href="assets/analysis.pdf" target="_blank" rel="noopener">Download PDF</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════ 14. DYNAMICS & DILEMMAS (beyond-brief content) ═══════════════ -->
+<section id="dynamics" style="background:#161009">
+  <div class="shards" aria-hidden="true"></div>
+  <div class="wrap reveal">
+    <p class="sec-kicker">Emergence</p>
+    <h2 class="sec-title">Dynamics &amp; Dilemmas</h2>
+    <p class="lede">Mechanics are what we designed; dynamics are what players actually did with them. Across human
+    playtests and simulation, three archetypes kept re-emerging — and every one of them was wrestling with the
+    same four dilemmas.</p>
+
+    <div class="pillars" style="margin-top:2.2rem">
+      <article class="pillar">
+        <div class="glyph">⇢</div>
+        <span class="tag">Archetype</span>
+        <h3>The Path Rusher</h3>
+        <p>The most common winner: skip the fights, burn the path deck, take the ordinary ending before anyone
+        can interfere. Aggression at the table faded once players discovered speed was safer than swords.</p>
+      </article>
+      <article class="pillar">
+        <div class="glyph">⚔</div>
+        <span class="tag">Archetype</span>
+        <h3>The Conqueror</h3>
+        <p>Some players commit to &ldquo;defeat everyone&rdquo; regardless of efficiency — and the data shows they
+        usually finish last. Combat exists to threaten, not to carry a whole strategy.</p>
+      </article>
+      <article class="pillar">
+        <div class="glyph">☍</div>
+        <span class="tag">Archetype</span>
+        <h3>The Strategic Partner</h3>
+        <p>Rare but real: pre-aligned pairs who keep the peace and chase the shared true ending together.
+        Diplomacy stays niche because the true ending&rsquo;s symbol cards come by event chance, not by treaty.</p>
+      </article>
+    </div>
+
+    <div class="balance-notes" style="margin-top:2.4rem">
+      <div class="bn"><b>Progression vs. survival.</b> Every Move costs Attention, so sprinting through the path deck
+      spends the very resource that pays for Memories and event choices — advance too fast and dangerous events catch
+      you unprepared; too slow and rivals catch up.</div>
+      <div class="bn rose"><b>Spend Attention vs. save it.</b> Attention buys movement, card effects, and event options
+      from one small pool. Early momentum or late flexibility — never both.</div>
+      <div class="bn"><b>Attack vs. advance.</b> Eliminating a rival pays (killers showed a modest win-rate edge in
+      balance testing), but every turn spent fighting is a turn not spent on your own path.</div>
+      <div class="bn rose"><b>True ending vs. safe rewards.</b> The three symbol Memories — Courage, Hope, Belief — come
+      from the risky, expensive event options: paying HP, max HP, or Attention where a safer choice offered healing.
+      Chasing the crown whole means bleeding for it. One surprise from playtests: deliberate HP sacrifice was often
+      correct — players who hurt now to position for an ending beat players who stayed comfortable.</div>
+    </div>
+
+    <div class="doc-row">
+      <div class="doc">
+        <div class="ico">◈</div>
+        <b>Game Dynamics — Full Write-up</b>
+        <p>Dominant strategies, recurring patterns, and emergent interactions across human and simulated playtests.</p>
+        <a class="btn" href="assets/dynamics.pdf" target="_blank" rel="noopener">Download PDF</a>
+      </div>
+      <div class="doc">
+        <div class="ico">⚖</div>
+        <b>Trade-offs &amp; Dilemmas — Full Write-up</b>
+        <p>The four core tensions in detail, and how the design keeps any single strategy from being always correct.</p>
+        <a class="btn" href="assets/tradeoffs.pdf" target="_blank" rel="noopener">Download PDF</a>
       </div>
     </div>
   </div>
